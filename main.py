@@ -1,12 +1,11 @@
-import os
 import requests
 import pandas as pd
 import numpy as np
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-# بارگیری توکن از محیط
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+# بارگیری توکن مستقیم
+TOKEN = "7730961238:AAGbwrC8NM-DDlHl5ztTmigE-4R9V-RPbY8"
 
 # ایجاد منوی ساده
 menu_keyboard = [["📊 بورس ایران"], ["🪙 رمزارز (به‌زودی)"]]

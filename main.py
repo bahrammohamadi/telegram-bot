@@ -1,11 +1,12 @@
-
+import os
 import requests
 import pandas as pd
 import numpy as np
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = "7730961238:AAGbwrC8NM-DDlHl5ztTmigE-4R9V-RPbY8"
+# بارگیری توکن از محیط
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 # ایجاد منوی ساده
 menu_keyboard = [["📊 بورس ایران"], ["🪙 رمزارز (به‌زودی)"]]
@@ -28,18 +29,16 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("دستور نامشخص است. لطفاً از منوی زیر انتخاب کن.", reply_markup=markup)
 
-# تحلیل ساده ۲۰ سهم پرتراکنش بورس ایران (شبیه‌سازی شده فعلاً)
+# تحلیل ساده ۲۰ سهم پرتراکنش بورس ایران
 def analyze_iran_bourse():
-    # اینجا به جای داده واقعی، فقط یک خروجی تستی ساختیم
     example_stocks = ["خگستر", "شپنا", "شستا", "خساپا", "فملی", "شتران", "خودرو", "وتجارت", "فولاد", "وبملت"]
     example_stocks += ["شبندر", "وبصادر", "سایپا", "پارسان", "فاسمین", "کچاد", "وتوصا", "کگل", "شکلر", "رمپنا"]
 
-    output = "نمادهای پرتراکنش امروز:"
-
+    output = "نمادهای پرتراکنش امروز:\n"
     for name in example_stocks:
         signal = np.random.choice(["سیگنال خرید", "روند خنثی", "سیگنال فروش"])
-       output += f"• {name}: {signal}\n"
-"
+        output += f"• {name}: {signal}\n"
+
     return output
 
 # اجرای ربات

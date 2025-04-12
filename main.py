@@ -4,8 +4,8 @@ import numpy as np
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-# بارگیری توکن مستقیم
-TOKEN = "7730961238:AAGbwrC8NM-DDlHl5ztTmigE-4R9V-RPbY8"
+# توکن ربات جدید
+TOKEN = "7297816887:AAFpV6rmvMEvTy1h6NThGau8QytFRTbEs4"
 
 # ایجاد منوی ساده
 menu_keyboard = [["📊 بورس ایران"], ["🪙 رمزارز (به‌زودی)"]]

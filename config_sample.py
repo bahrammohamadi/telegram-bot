@@ -1,0 +1,1 @@
+# Sample content for config_sample.py

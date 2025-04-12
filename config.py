@@ -1,0 +1,4 @@
+
+BOT_TOKEN = "7730961238:AAGbwrC8NM-DDlHl5ztTmigE-4R9V-RPbY8"
+ADMIN_ID = 46428047
+MARKET_MODE = ["stock", "crypto"]

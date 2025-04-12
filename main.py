@@ -38,7 +38,7 @@ def analyze_iran_bourse():
 
     for name in example_stocks:
         signal = np.random.choice(["سیگنال خرید", "روند خنثی", "سیگنال فروش"])
-        output += f"• {name}: {signal}
+       output += f"• {name}: {signal}\n"
 "
     return output
 

@@ -5,7 +5,7 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 # توکن ربات جدید
-TOKEN = "7297816887:AAFpV6rmvMEvTyih6NThGau8qYtFRTbEs4"
+TOKEN = "7297816887:AAFGMbT420FDsmmMc56hPUsM7rUToazkp0g"
 
 # ایجاد منوی ساده
 menu_keyboard = [["📊 بورس ایران"], ["🪙 رمزارز (به‌زودی)"]]
